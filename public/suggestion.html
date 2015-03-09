@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Park SMART</title>
+
+    <!-- Bootstrap Core CSS -->
+	 <!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/*.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Park <b>SMART</b></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="current_parking.html">Current Parking</a>
+                    </li>
+                    <li>
+                        <a href="history.html">History</a>
+                    </li>
+                    <li>
+                        <a href="myacc.html">My Account</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+		<Label>Your Destination</label>
+		<span class="input-group">
+      <input type="text" class="form-control" id="location" placeholder="Singapore Management University">
+		<span class="input-group-addon"><a href="nearest.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></span>
+    </span>
+	<br>
+	Following are the recommendations that we have provided for you. <br/>
+	
+	<br/>
+        <div id="content">
+    <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+        <li class="active"><a href="#red" data-toggle="tab">Price</a></li>
+        <li><a href="#orange" data-toggle="tab">Distance</a></li>
+		<li><a href="#blue" data-toggle="tab">Duration</a></li>
+        <li><a href="#yellow" data-toggle="tab">Valet</a></li>
+        <li><a href="#green" data-toggle="tab">Reserve</a></li>
+		
+    </ul>
+    <div id="my-tab-content" class="tab-content">
+        <div class="tab-pane active" id="red">
+            <h1>Sort by: Price</h1>
+			<table class="table">
+				 <tr class="info">
+    				<td>Location</td>
+					<td>Per Hour</td>
+					<td>Navigate to</td>
+					<td></td>
+  				</tr>
+				<tr>
+					<td><a href="#" data-toggle="tooltip" data-html="true" data-original-title="Distance:  3.75km <br> Duration: 20min<br> Lots: 24<br> Walk: 0.5km <br>Free Bus: No <br>Valet: No<br>Reserve: No <br>">Plaza Singapura</a></td>
+					<td>$1.07 <span class="glyphicon glyphicon-bullhorn" style="color:red;" aria-hidden="true"></span></td>
+					<td><a href="navPS.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></td>
+					<td><a class="btn btn-info" href="infoPS.html" role="button">info</a></td>
+				</tr>
+				<tr>
+					<td><a href="#" data-toggle="tooltip" data-html="true" data-original-title="Distance: 4.5km<br> Duration: 30min<br> Lots: 108<br> Walk: 0.2km <br>Free Bus: No <br>Valet: No<br>Reserve: Yes <br>">Park Mall</a></td>
+					<td>$2.00</td>
+					<td><a href="navPM.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></td>
+					<td><a class="btn btn-info" href="infoPM.html" role="button">info</a></td>
+				</tr>
+				<tr>
+					<td><a href="#" data-toggle="tooltip" data-html="true" data-original-title="Distance: 6.0km<br> Duration: 66min<br> Lots: 78<br> Walk: 3.0km <br>Free Bus: No <br>Valet: No<br>Reserve: Yes <br>">Orchard Point</a></td>
+					<td>$2.00</td>
+					<td><a href="navOP.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></td>
+					<td><a class="btn btn-info" href="infoOP.html" role="button">info</a></td>
+				</tr>
+				<tr>
+					<td><a href="#" data-toggle="tooltip" data-html="true" data-original-title="Distance: 5.6km<br> Duration: 16min<br> Lots: 111<br> Walk: 2.6km <br>Free Bus: Yes <br>Valet: Yes<br>Reserve: No <br>">Concorde Hotel</a></td>
+					<td>$2.14</td>
+					<td><a href="navCH.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></td>
+					<td><a class="btn btn-info" href="infoCH.html" role="button">info</a></td>
+				</tr>
+				<tr>
+					<td><a href="#" data-toggle="tooltip" data-html="true" data-original-title="Distance: 3.75km<br>  Duration: 15min<br> Lots: 55<br> Walk: 0.5km <br>Free Bus: No <br>Valet: Yes<br>Reserve: No <br>">The Cathay</a></td>
+					<td>$2.80</td>
+					<td><a href="navC.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></td>
+					<td><a class="btn btn-info" href="infoCathay.html" role="button">info</a></td>
+				</tr>
+			</table>
+        </div> 
+        <div class="tab-pane" id="orange">
+            <h1>Sort by: Distance</h1>
+            <table class="table">
+				 <tr class="info">
+    				<td>Location</td>
+					<td>Distance</td>
+					<td>Navigate to</td>
+					<td></td>
+  				</tr>
+				<tr>
+				<tr>
+					<td><a href="#" data-toggle="tooltip" data-html="true" data-original-title="Price: $2.80<br>  Duration: 15min<br> Lots: 55<br> Walk: 0.5km <br>Free Bus: No <br>Valet: Yes<br>Reserve: No <br>">The Cathay</a></td>
+					<td>3.75km</td>
+					<td><a href="navC.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></td>
+					<td><a class="btn btn-info" href="infoCathay.html" role="button">info</a></td>
+				</tr>
+					<td><a href="#" data-toggle="tooltip" data-html="true" data-original-title="Price: $1.07 <br> Duration: 20min<br> Lots: 24<br> Walk: 0.9km <br>Free Bus: No <br>Valet: No<br>Reserve: No <br>">Plaza Singapura</a></td>
+					<td>3.8km</td>
+					<td><a href="navPS.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></td>
+					<td><a class="btn btn-info" href="infoPS.html" role="button">info</a></td>
+				</tr>
+				<tr>
+					<td><a href="#" data-toggle="tooltip" data-html="true" data-original-title="Price: $2.00<br> Duration: 30min<br> Lots: 108<br> Walk: 0.2km <br>Free Bus: No <br>Valet: No<br>Reserve: Yes <br>">Park Mall</a></td>
+					<td>4.5km</td>
+					<td><a href="navPM.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></td>
+					<td><a class="btn btn-info" href="infoPM.html" role="button">info</a></td>
+				</tr>
+				<tr>
+					<td><a href="#" data-toggle="tooltip" data-html="true" data-original-title="Price: $2.14<br> Duration: 16min<br> Lots: 111<br> Walk: 2.6km <br>Free Bus: Yes <br>Valet: Yes<br>Reserve: No <br>">Concorde Hotel</a></td>
+					<td>5.6km</td>
+					<td><a href="navCH.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></td>
+					<td><a class="btn btn-info" href="infoCH.html" role="button">info</a></td>
+				</tr>
+				<tr>
+					<td><a href="#" data-toggle="tooltip" data-html="true" data-original-title="Price: $2.00<br> Duration: 66min<br> Lots: 78<br> Walk: 3.0km <br>Free Bus: No <br>Valet: No<br>Reserve: Yes <br>">Orchard Point</a></td>
+					<td>6.0km</td>
+					<td><a href="navOP.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></td>
+					<td><a class="btn btn-info" href="infoOP.html" role="button">info</a></td>
+				</tr>
+				
+			</table>
+			
+        </div>
+		<div class="tab-pane" id="blue">
+            <h1>Sort by: Duration</h1>
+            <table class="table">
+				 <tr class="info">
+    				<td>Location</td>
+					<td>Duration</td>
+					<td>Travel Method<td>
+					<td>Navigate to</td>
+					<td></td>
+  				</tr>
+				<tr>
+				<tr>
+					<td><a href="#" data-toggle="tooltip" data-html="true" data-original-title="Price: $2.80<br>  Distance: 3.75km<br> Lots: 55<br> Walk: 0.5km <br>Free Bus: No <br>Valet: Yes<br>Reserve: No <br>">The Cathay</a></td>
+					<td>15min</td>
+					<td>Drive 3.25km for 5min then Walk for 0.5km for 10min to your destination.<td>
+					<td><a href="navC.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></td>
+					<td><a class="btn btn-info" href="infoCathay.html" role="button">info</a></td>
+				</tr>
+				<tr>
+					<td><a href="#" data-toggle="tooltip" data-html="true" data-original-title="Price: $2.14<br> Distance: 5.6km<br> Lots: 111<br> Walk: No <br>Free Bus: Yes <br>Valet: Yes<br>Reserve: No <br>">Concorde Hotel</a></td>
+					<td>16min</td>
+					<td>Drive for 2.9km for 4min. Hand over your car to our free Valet Service and enjoy free shuttle bus to your destination. <span class="glyphicon glyphicon-bullhorn" style="color:red;" aria-hidden="true"></span><td>
+					<td><a href="navCH.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></td>
+					<td><a class="btn btn-info" href="infoCH.html" role="button">info</a></td>
+				</tr>
+					<td><a href="#" data-toggle="tooltip" data-html="true" data-original-title="Price: $1.07 <br> Distance: 3.8km<br> Lots: 24<br> Walk: 0.9km <br>Free Bus: No <br>Valet: No<br>Reserve: No <br>">Plaza Singapura</a></td>
+					<td>20min</td>
+					<td>Drive 3.7km for 7min then Walk 0.9km for 13min to your destination.<td>
+					<td><a href="navPS.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></td>
+					<td><a class="btn btn-info" href="infoPS.html" role="button">info</a></td>
+				</tr>
+				<tr>
+					<td><a href="#" data-toggle="tooltip" data-html="true" data-original-title="Price: $2.00<br> Distance: 4.5km<br> Lots: 108<br> Walk: 0.2km <br>Free Bus: No <br>Valet: No<br>Reserve: Yes <br>">Park Mall</a></td>
+					<td>30 min</td>
+					<td>Drive 3.13km for 5min. Then Walk 0.3km to Dhoby Ghaut Station and take public bus 14,36,16. Alight after 1 stop. Walk 0.2km for 5min to your destination.<td>
+					<td><a href="navPM.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></td>
+					<td><a class="btn btn-info" href="infoPM.html" role="button">info</a></td>
+				</tr>
+				
+				<tr>
+					<td><a href="#" data-toggle="tooltip" data-html="true" data-original-title="Price: $2.00<br> Distance: 6.0km<br> Lots: 78<br> Walk: 3.0km <br>Free Bus: No <br>Valet: No<br>Reserve: Yes <br>">Orchard Point</a></td>
+					<td>66min</td>
+					<td>Drive 3.13km for 6min then Walk 3.0km for 60min to your destination.<td>
+					<td><a href="navOP.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></td>
+					<td><a class="btn btn-info" href="infoOP.html" role="button">info</a></td>
+				</tr>
+				
+			</table>
+        </div>
+        <div class="tab-pane" id="yellow">
+            <h1>Sort by: Valet Parking</h1>
+            <table class="table">
+				 <tr class="info">
+    				<td>Location</td>
+					<td>Valet</td>
+					<td>Navigate to</td>
+					<td></td>
+  				</tr>
+				<tr>
+					<td><a href="#" data-toggle="tooltip" data-html="true" data-original-title="Price: $2.14<br> Distance: 2.6km<br> Duration: 10min <br>Lots: 111<br> Walk: No <br>Free Bus: Yes <br>Reserve: No <br>">Concorde Hotel</a></td>
+					<td>Free <span class="glyphicon glyphicon-bullhorn" style="color:red;" aria-hidden="true"></span></td>
+					<td><a href="navCH.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></td>
+					<td><a class="btn btn-info" href="infoCH.html" role="button">info</a></td>
+				</tr>
+				</table>
+        </div>
+        <div class="tab-pane" id="green">
+            <h1>Sort by: Reserve Parking</h1>
+			 <table class="table">
+				 <tr class="info">
+    				<td>Location</td>
+					<td>Reserve</td>
+					<td>Navigate to</td>
+					<td></td>
+  				</tr>
+            <tr>
+					<td><a href="#" data-toggle="tooltip" data-html="true" data-original-title="Price: $2.00<br> Distance: 2.3km<br> Duration: 20min <br>Lots: 108<br> Walk: 0.5km <br>Free Bus: No <br>Valet: No<br>">Park Mall</a></td>
+					<td><a href="#" onclick="$('#myModal').modal('show');"> Reserve your parking slot with us!</a></td>
+					<td><a href="navPM.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></td>
+					<td><a class="btn btn-info" href="infoPM.html" role="button">info</a></td>
+				</tr>
+				</table>
+        </div>
+		<span class="glyphicon glyphicon-bullhorn" style="color:red;  aria-hidden="true"></span> <label style="color:red;" >Promotion</label>
+    </div>
+</div>
+ 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><h4><b>We have reserve your parking slot at <u>Concorde Hotel</u></b></h4>
+      </div>
+      <div class="modal-body">
+        <h4>When you arrive the carpark, please search for </h4>
+		<h3>Section <b>G</b>, Lot No. <b>123</b></h3>
+      </div>
+      <div class="modal-footer">
+	  <a class="btn btn-primary" href="" role="button">Okay</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+		$(document).ready(function(){
+    $("#tabs li:eq(0) a").tab('show');
+})
+	
+    })
+	 
+</script>    
+<script type="text/javascript">
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip({
+        placement : 'top'
+    });
+});
+</script>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59572668-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>

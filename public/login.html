@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sampleApp">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
+        <script src="https://cdn.firebase.com/js/client/2.1.0/firebase.js"></script>
+<script src="https://cdn.firebase.com/js/simple-login/1.6.4/firebase-simple-login.js"></script>    <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+    
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+   <!-- <script src="app.js"></script> -->
+   
+   <script>
+      //Here is all the code that talks to Firebase
+       var app = angular.module("sampleApp", ["firebase"]);
+       
+       
+
+      // let's create a re-usable factory that generates the $firebaseSimpleLogin instance
+      app.factory("simpleLogin", ["$firebaseSimpleLogin", function($firebaseSimpleLogin) {
+        var ref = new Firebase("https://googlelogin.firebaseio.com/");
+        return $firebaseSimpleLogin(ref);
+      }]);
+      
+      // and use it in our controller
+      app.controller("loginCtrl", ["$scope", "simpleLogin", function($scope, simpleLogin) {
+        $scope.auth = simpleLogin;
+      }]);
+      
+      
+     
+   </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Park SMART</title>
+
+    <!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/social-buttons.css" rel="stylesheet">
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/*.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Intro Header -->
+    <header class="intro1">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>   <span class="light">Park</span> Smart</h1>
+						<div class="bg-info" style="padding:15px;">
+						<input type="text" class="form-control" id="Username" placeholder="Username">
+						<br>
+						<input type="text" class="form-control" id="password" placeholder="Password">
+						<br>
+						<a class="btn btn-github" href="payment_acc.html" role="button"> Login</a>
+						<br><br>
+						<button class="btn btn-google"><i class="fa fa-google"></i> | Connect with Google</button>
+					</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script src="js/jquery.js"></script>
+    <script src="js/grayscale.js"></script>
+    <hr>
+    <div ng-controller="loginCtrl">
+      <div ng-show="auth.user">
+        <p>Hello, {{auth.user.displayName}}</p>
+        <button ng-click="auth.$logout()" id="logoutbtn">Logout</button>
+	  </div>
+      <div ng-hide="auth.user">
+        <p>Welcome, please log in.</p>
+        <button ng-click="auth.$login('google')">Login</button>
+      </div>
+    </div>
+</body>
+
+</html>
